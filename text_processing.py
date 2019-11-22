@@ -15,7 +15,6 @@ class TextProcessing(object):
 
     def clean_phrase(self):
         text = self.text
-        text = text.encode('ascii', errors='ignore').decode()
         text = text.lower()
         text = re.sub('\W|\s', ' ', text)
         text = re.sub(r'\s+[a-zA-Z]\s+|\d|http\S+', " ", text)
